@@ -1,0 +1,46 @@
+/* Allow navbar items to be laid out with flexbox */
+.navbar-flex {
+    align-items: center;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+}
+
+.page-footer {
+    padding: 0.5rem;
+}
+
+/* Used with FlexEmbed to create an Image which scales with the page */
+.CoverImage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    margin: 0 auto;
+}
+
+/*! suit-flex-embed v1.4.0 | MIT License | github.com/suitcss */
+.FlexEmbed {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.FlexEmbed:before {
+    content: "";
+    display: block;
+}
+
+.FlexEmbed--3by1:before {
+    padding-bottom: 33.33333%;
+}
+
+.FlexEmbed--2by1:before {
+    padding-bottom: 50%;
+}
+
+.FlexEmbed--16by9:before {
+    padding-bottom: 56.25%;
+}
+
+.FlexEmbed--4by3:before {
+    padding-bottom: 75%;
+}
