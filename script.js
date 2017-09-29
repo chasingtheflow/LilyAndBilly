@@ -2,7 +2,7 @@ $(function() {
     'use strict';
 
     // Activate smooth scrolling on DOMContentLoaded
-    $('a').smoothScroll({offset: -($('#navbar').height() + 15)});
+    $('a .nav-link').smoothScroll({offset: -($('#navbar').height() + 15)});
 
     // Handle Crest Resizing upon scrolling and window resizing
     var $c = $('#crest');
