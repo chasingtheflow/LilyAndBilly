@@ -59,3 +59,17 @@
 .FlexEmbed--4by3:before {
     padding-bottom: 75%;
 }
+
+.lilbil-heading {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.lilbil-content {
+    padding-bottom: 24px;
+}
+
+.lilbil-content p {
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
