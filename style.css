@@ -73,3 +73,7 @@
     line-height: 1.2;
     margin-bottom: 0.5rem;
 }
+
+.text-shadow-dark {
+    text-shadow: #1d1c19 2px 2px 2px;
+}
