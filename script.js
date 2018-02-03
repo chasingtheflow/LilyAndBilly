@@ -41,6 +41,11 @@ $(function() {
     $(window).resize(handleResize);
     $(window).scroll(resizeCrest);
 
+    // Slideshow Slides
+    $('#slideshow').on('slide.bs.carousel', function () {
+        // do something…
+        console.log('Slideshow slide');
+    })
     function resizeCrest() {
         var documentTop = $(document).scrollTop();
         var crestTop = $c.offset().top;
