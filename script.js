@@ -41,11 +41,21 @@ $(function() {
     $(window).resize(handleResize);
     $(window).scroll(resizeCrest);
 
-    // Slideshow Slides
+    // Lazy Load Slideshow Slides
+    // We load the first 3 slides on page load
+    // remaining images are loaded dynamically 
+    // whenever the slide changes either via
+    // user click or the carousel timings
     $('#slideshow').on('slide.bs.carousel', function () {
-        // do something…
-        console.log('Slideshow slide');
-    })
+        var lazyImg = jQuery('img[data-src]')[0];
+        if (lazyImg) {
+            lazyImg.setAttribute('src', lazyImg.getAttribute('data-src'));
+            lazyImg.onload = function() {
+                lazyImg.removeAttribute('data-src');
+            };
+        }
+    });
+
     function resizeCrest() {
         var documentTop = $(document).scrollTop();
         var crestTop = $c.offset().top;
