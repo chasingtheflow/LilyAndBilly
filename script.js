@@ -46,9 +46,17 @@ $(function() {
     // remaining images are loaded dynamically 
     // whenever the slide changes either via
     // user click or the carousel timings
-    $('#slideshow').on('slide.bs.carousel', function () {
+    $('#slideshow').on('slide.bs.carousel', function (e) {
+        console.log(e);
+        if (e.to > 0) {
+            console.log('Greater than zero');
+            $('#slideshow-previous').show();
+        }
         var lazyImg = jQuery('img[data-src]')[0];
         if (lazyImg) {
+            if (e.to == 0) {
+                $('#slideshow-previous').hide();
+            }
             lazyImg.setAttribute('src', lazyImg.getAttribute('data-src'));
             lazyImg.onload = function() {
                 lazyImg.removeAttribute('data-src');
