@@ -47,9 +47,7 @@ $(function() {
     // whenever the slide changes either via
     // user click or the carousel timings
     $('#slideshow').on('slide.bs.carousel', function (e) {
-        console.log(e);
         if (e.to > 0) {
-            console.log('Greater than zero');
             $('#slideshow-previous').show();
         }
         var lazyImg = jQuery('img[data-src]')[0];
