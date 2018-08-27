@@ -14,6 +14,11 @@ $(function() {
         });
     });
 
+    // Activate tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+
     $('a.nav-link, a[href="#home"]')
         .bind('click', function(event) {
             // Remove '#' from the hash.
